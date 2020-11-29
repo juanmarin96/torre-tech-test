@@ -25,7 +25,13 @@ $torre-app-warn: mat-palette($mat-red);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as `color` or `typography`.
-$torre-app-theme: mat-dark-theme($torre-app-primary, $torre-app-accent, $torre-app-warn);
+$torre-app-theme: mat-dark-theme((
+  color: (
+    primary: $torre-app-primary,
+    accent: $torre-app-accent,
+    warn: $torre-app-warn,  
+  )
+));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component

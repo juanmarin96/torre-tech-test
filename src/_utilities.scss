@@ -5,3 +5,8 @@
 @mixin text-bold {
     font-weight: bold;
 }
+
+@mixin center-align {
+    margin-left: auto;
+    margin-right: auto;
+}

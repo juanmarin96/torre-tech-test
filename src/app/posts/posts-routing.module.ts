@@ -1,15 +1,11 @@
+import { PostsListComponent } from './posts-list/posts-list.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-
 const routes: Routes = [
   {
-    path: 'posts',
-    loadChildren: () => import('../posts/posts.module').then(m => m.PostsModule)
-  },
-  {
     path: '',
-    redirectTo: 'posts', pathMatch: 'full'
+    component: PostsListComponent
   }
 ];
 
@@ -17,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class MainLayoutRoutingModule { }
+export class PostsRoutingModule { }

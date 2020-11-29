@@ -1,11 +1,12 @@
 @import '../../utilities';
 
-.sidenav-container {
+.sidenav-container {    
     position: absolute;
     top: 60px;
-    bottom: 60px;
+    bottom: 0px;
     left: 0;
     right: 0;
+
 
     &__sidenav {
         display: flex;
@@ -26,5 +27,14 @@
         &--bold {
             @include text-bold();
         }
+    }
+
+    &__avatar{
+        height: auto;
+        width: auto;
+        max-width: 34px;
+        max-height: 34px;
+        border-radius: 100px;
+        cursor: pointer;
     }
 }

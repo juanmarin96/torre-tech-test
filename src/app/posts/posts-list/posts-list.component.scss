@@ -1,0 +1,6 @@
+@import '../../../utilities';
+
+.post-container {
+    @include center-align();
+    max-width: 500px;
+}

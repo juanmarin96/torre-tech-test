@@ -1,13 +1,22 @@
 <mat-toolbar class="header">
-    <button class="menu-button" mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+    <button class="menu-button" mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
     <h1 class="header__title--bold">torre</h1>
     <span class="spacer"></span>
-    <h1 class="example-app-name">torre</h1>
+    <a class="" mat-button>
+      <mat-icon>groups</mat-icon>
+      <span>Comunidad</span>      
+    </a>
+    <div>
+      <img class="header__avatar" src="https://starrgate.s3.amazonaws.com/users/9bef7431aa21dcfec473b5bc698c185449f0dd56/profile_S5aXTsT.jpg"/>
+    </div>
 </mat-toolbar>
-  <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #sidenav mode="side" opened class="sidenav-container__sidenav" [fixedInViewport]="true">
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <p><button mat-button (click)="sidenav.toggle()">Learn</button></p>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+<mat-sidenav-container class="sidenav-container" [hasBackdrop]="true">
+  <mat-sidenav #sidenav mode="push" class="sidenav-container__sidenav" [fixedInViewport]="true">
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <h1>Hola Mundo</h1>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,19 +1,56 @@
 <mat-card class="card-post">
     <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
     <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
+        <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+        </p>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-actions class="post-actions">
+        <button matTooltip=" I like" mat-icon-button color="primary">
+            <mat-icon>thumb_up_alt</mat-icon>
+        </button>
+        <button matTooltip="Dislike" mat-icon-button color="primary">
+            <mat-icon>thumb_down_alt</mat-icon>
+        </button>
+        <span class="spacer"></span>
+        <a class="post-actions__view-comments-button" mat-button color="primary">View comments</a>
     </mat-card-actions>
-  </mat-card>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="create-comment-container">
+        <img class="create-comment-container__avatar" src="https://starrgate.s3.amazonaws.com/users/9bef7431aa21dcfec473b5bc698c185449f0dd56/profile_S5aXTsT.jpg">
+        <mat-form-field class="create-comment-container__form">
+            <input autocomplete="off" #input class="create-comment-container__input" matInput placeholder="Write your comment">
+        </mat-form-field>
+    </div>
+    <!-- COMMENTS -->
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="create-comment-container">
+        <img class="create-comment-container__avatar" src="https://starrgate.s3.amazonaws.com/users/9bef7431aa21dcfec473b5bc698c185449f0dd56/profile_S5aXTsT.jpg">
+        <mat-form-field class="create-comment-container__form" appearance="outline">
+            <textarea value="Lorem ipsum dolor sit amet" readonly autocomplete="off" #input class="create-comment-container__input--no-resize" matInput></textarea>
+        </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="create-comment-container">
+        <img class="create-comment-container__avatar" src="https://starrgate.s3.amazonaws.com/users/9bef7431aa21dcfec473b5bc698c185449f0dd56/profile_S5aXTsT.jpg">
+        <mat-form-field class="create-comment-container__form" appearance="outline">
+            <textarea value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" readonly autocomplete="off" #input class="create-comment-container__input--no-resize" matInput></textarea>
+        </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="create-comment-container">
+        <img class="create-comment-container__avatar" src="https://starrgate.s3.amazonaws.com/users/9bef7431aa21dcfec473b5bc698c185449f0dd56/profile_S5aXTsT.jpg">
+        <mat-form-field class="create-comment-container__form" appearance="outline">
+            <textarea value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" readonly autocomplete="off" #input class="create-comment-container__input--no-resize" matInput></textarea>
+        </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="create-comment-container">
+      <img class="create-comment-container__avatar" src="https://starrgate.s3.amazonaws.com/users/9bef7431aa21dcfec473b5bc698c185449f0dd56/profile_S5aXTsT.jpg">
+      <mat-form-field class="create-comment-container__form" appearance="outline">
+          <textarea value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." readonly autocomplete="off" #input class="create-comment-container__input--no-resize" matInput></textarea>          
+      </mat-form-field>
+  </div>
+</mat-card>

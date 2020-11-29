@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreatePostDialogComponent implements OnInit {
 
+  postImage;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onFileInput(event){
+    var tgt = event.target || window.event.srcElement,
+    files = tgt.files;
+
+    if (FileReader && files && files.length) {
+      var fr = new FileReader();
+      fr.onload = (_event) =>{
+        this.postImage = fr.result;
+      }
+      fr.readAsDataURL(files[0]);
+  }
   }
 
 }

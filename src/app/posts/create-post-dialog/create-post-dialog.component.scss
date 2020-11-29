@@ -1,7 +1,20 @@
+@import '../../../utilities';
+
 .insert-image-button{
     &__icon{
         &--padding-right{
             padding-right: 5px;
         }
+    }
+}
+
+.post-image-container {
+    text-align: center;
+    &__image{
+        @include center-column-post-block(100%);
+        @include border-radius(4px);
+        width: auto;
+        height: auto;
+        //max-height: 400px;
     }
 }

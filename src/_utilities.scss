@@ -27,3 +27,7 @@
     @include center-align();
     max-width: $max-width;
 }
+
+@mixin border-radius($radius: 20px) {
+    border-radius: $radius;
+}

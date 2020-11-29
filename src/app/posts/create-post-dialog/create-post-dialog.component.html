@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>Create new post</h2>
+<mat-dialog-content class="mat-typography">
+  <div fxLayout="column">
+    <div fxLayout="column">
+        <mat-form-field appearance="outline">
+            <mat-label>Write something do you want</mat-label>
+            <textarea #input matInput></textarea>
+            <mat-hint class="create-post-container__hint" align="end">{{input.value?.length || 0}}/250</mat-hint>
+        </mat-form-field>
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <span fxFlex="150px">Add to your post:</span>
+            <button class="insert-image-button" mat-button color="primary">
+                <mat-icon class="insert-image-button__icon--padding-right">insert_photo</mat-icon>
+                <span class="insert-image-button__text">IMAGE</span>
+            </button>
+        </div>        
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button color="primary" mat-dialog-close>CANCEL</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>CREATE</button>
+</mat-dialog-actions>

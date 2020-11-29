@@ -1,8 +1,7 @@
 @import '../../../utilities';
 
 .create-post-container {
-    @include center-align();
-    max-width: 500px;
+    @include center-column-post-block();
 
     &__avatar {
         @include avatar-image();
@@ -14,10 +13,11 @@
 
     &__form {
         @include full-width();
+        cursor: pointer;
     }
 
     &__input {
-        resize: none !important;
+        cursor: pointer;
     }
 
     &__hint {
@@ -31,8 +31,11 @@
 
 
 .post-container {
-    @include center-align();
-    max-width: 500px;
+    @include center-column-post-block();
 }
 
+
+.post-types-container{
+    @include center-column-post-block();
+}
 

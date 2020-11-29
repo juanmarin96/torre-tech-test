@@ -1,0 +1,7 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+@mixin text-bold {
+    font-weight: bold;
+}

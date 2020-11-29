@@ -1,14 +1,30 @@
-.sidenav-container{
+@import '../../utilities';
+
+.sidenav-container {
     position: absolute;
     top: 60px;
     bottom: 60px;
     left: 0;
     right: 0;
 
-    &__sidenav{
+    &__sidenav {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 200px;
+    }
+}
+
+.header {
+
+    &__menu-button {
+        margin-right: 24px;
+    }
+
+    &__title {
+
+        &--bold {
+            @include text-bold();
+        }
     }
 }

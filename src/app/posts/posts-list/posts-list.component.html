@@ -1,5 +1,10 @@
-<div class="create-post-container">
-
+<div fxLayout="row" fxLayoutAlign="space-between center" class="create-post-container">
+    <img class="create-post-container__avatar" src="https://starrgate.s3.amazonaws.com/users/9bef7431aa21dcfec473b5bc698c185449f0dd56/profile_S5aXTsT.jpg">
+    <mat-form-field class="create-post-container__form" appearance="outline">
+        <mat-label>What's Up</mat-label>
+        <textarea #input class="create-post-container__input" matInput placeholder="Write do you want"></textarea>
+        <mat-hint class="create-post-container__hint" align="end">{{input.value?.length || 0}}/250</mat-hint>                   
+    </mat-form-field>
 </div>
 <div class="post-container">
     <app-post *ngFor="let post of posts"></app-post>

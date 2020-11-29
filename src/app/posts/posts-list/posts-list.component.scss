@@ -1,6 +1,38 @@
 @import '../../../utilities';
 
+.create-post-container {
+    @include center-align();
+    max-width: 500px;
+
+    &__avatar {
+        @include avatar-image();
+        max-width: 50px;
+        max-height: 50px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+
+    &__form {
+        @include full-width();
+    }
+
+    &__input {
+        resize: none !important;
+    }
+
+    &__hint {
+        float: right;
+    }
+}
+
+::ng-deep .mat-form-field-subscript-wrapper {
+    padding: 0 !important;
+}
+
+
 .post-container {
     @include center-align();
     max-width: 500px;
 }
+
+

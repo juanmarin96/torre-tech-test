@@ -10,3 +10,15 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+@mixin avatar-image {
+    height: auto;
+    width: auto;
+    max-width: 34px;
+    max-height: 34px;
+    border-radius: 100px;
+}
+
+@mixin full-width {
+    width: 100%;
+}
